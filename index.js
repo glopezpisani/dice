@@ -13,20 +13,21 @@ document.querySelector(".img1").setAttribute("src", "./images/dice"+dadoPlayer1+
 
 document.querySelector(".img2").setAttribute("src", "./images/dice"+dadoPlayer2+".png");
 
-
+//return a random number between 1-6
 function rollDice() {
-    var aleatorio = 1+Math.floor(Math.random()*6);
+    var aleatorio = 1 + Math.floor(Math.random()*6);
     return aleatorio;
 }
 
+//return the text with the result (who won or draw)
 function ganadorDice(play1, play2) {
     if (play1 === play2) {
         return "Draw!";
     }
     if (play1 > play2) {
-        return "Player 1 Wins!";
+        return "🚩 Player 1 Wins!";
     } else {
-        return "Player 2 Wins!";
+        return "Player 2 Wins! 🚩";
     }
 }
 
